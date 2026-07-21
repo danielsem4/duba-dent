@@ -26,7 +26,7 @@ function applyTheme(theme: Theme) {
 export const useThemeStore = create<ThemeState>()(
   persist(
     (set, get) => ({
-      theme: 'system',
+      theme: 'dark',
       setTheme: (theme) => {
         applyTheme(theme)
         set({ theme })

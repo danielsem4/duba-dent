@@ -13,11 +13,13 @@ i18n
   .use(initReactI18next)
   .init({
     resources: { en, he },
-    fallbackLng: 'en',
+    fallbackLng: 'he',
     supportedLngs: SUPPORTED_LANGUAGES,
     interpolation: { escapeValue: false },
+    returnObjects: true,
     detection: {
-      order: ['localStorage', 'navigator'],
+      // Hebrew-first brand: only honor an explicit saved choice, otherwise fall back to he.
+      order: ['localStorage'],
       caches: ['localStorage'],
       lookupLocalStorage: 'app-language',
     },

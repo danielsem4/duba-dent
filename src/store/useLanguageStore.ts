@@ -18,8 +18,8 @@ function applyLanguage(language: SupportedLanguage) {
 }
 
 function initialLanguage(): SupportedLanguage {
-  const current = (i18n.resolvedLanguage ?? 'en') as SupportedLanguage
-  return SUPPORTED_LANGUAGES.includes(current) ? current : 'en'
+  const current = (i18n.resolvedLanguage ?? 'he') as SupportedLanguage
+  return SUPPORTED_LANGUAGES.includes(current) ? current : 'he'
 }
 
 export const useLanguageStore = create<LanguageState>((set) => {

@@ -1,37 +1,58 @@
 import { useTranslation } from 'react-i18next'
-import { CalendarCheck, Sparkles } from 'lucide-react'
+import { ChevronDown, Dot } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
+import { LOGO_SRC } from '@/common/constants/media'
+import { GoldCta } from '@/components/common/GoldCta'
+import { DubaiSkyline } from '@/screens/home/components/DubaiSkyline'
 
 export function Hero() {
   const { t } = useTranslation()
+  const bullets = t('hero.subtitle', { returnObjects: true }) as string[]
 
   return (
-    <section className="relative overflow-hidden">
-      <div className="from-primary/10 via-background to-background absolute inset-0 bg-gradient-to-b" />
-      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-24 text-center md:py-32">
-        <span className="border-primary/30 bg-primary/10 text-primary inline-flex items-center gap-2 rounded-full border px-4 py-1 text-sm font-medium">
-          <Sparkles className="size-4" />
-          {t('hero.badge')}
-        </span>
-        <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-balance md:text-6xl">
-          {t('hero.title')}
-        </h1>
-        <p className="text-muted-foreground max-w-2xl text-lg text-pretty">
-          {t('hero.subtitle')}
+    <section
+      id="top"
+      className="grain relative flex min-h-svh flex-col items-center justify-center overflow-hidden px-4 pt-24 pb-24 text-center sm:pb-32"
+    >
+      {/* skyline behind content */}
+      <DubaiSkyline className="pointer-events-none absolute inset-x-0 bottom-0 h-[38%] w-full opacity-90" />
+      <div className="from-background pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t to-transparent" />
+
+      <div className="animate-in fade-in slide-in-from-bottom-4 relative z-10 flex flex-col items-center gap-6 duration-1000">
+        <img
+          src={LOGO_SRC}
+          alt={t('nav.brand')}
+          className="glow-violet size-28 rounded-full sm:size-32"
+        />
+
+        <p className="text-gold text-sm font-medium tracking-[0.2em] sm:text-base">
+          {t('hero.tagline')}
         </p>
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <Button size="lg" asChild>
-            <a href="#contact">
-              <CalendarCheck className="size-4" />
-              {t('hero.primaryCta')}
-            </a>
-          </Button>
-          <Button size="lg" variant="outline" asChild>
-            <a href="#services">{t('hero.secondaryCta')}</a>
-          </Button>
+
+        <h1 className="max-w-4xl text-4xl leading-tight font-extrabold text-balance sm:text-6xl">
+          {t('hero.titlePrefix')} <span className="text-gold">EMAX</span>{' '}
+          {t('hero.titleSuffix')}
+        </h1>
+
+        <div className="text-muted-foreground flex flex-wrap items-center justify-center gap-1 text-base sm:text-lg">
+          {bullets.map((b, i) => (
+            <span key={b} className="inline-flex items-center">
+              {i > 0 && <Dot className="text-primary size-5" />}
+              {b}
+            </span>
+          ))}
         </div>
+
+        <GoldCta label={t('hero.cta')} className="mt-2" />
       </div>
+
+      <a
+        href="#gallery"
+        className="text-muted-foreground hover:text-foreground absolute bottom-8 z-10 flex flex-col items-center gap-1 text-xs transition"
+      >
+        {t('hero.scroll')}
+        <ChevronDown className="size-4 animate-bounce" />
+      </a>
     </section>
   )
 }

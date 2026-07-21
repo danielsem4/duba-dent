@@ -12,6 +12,25 @@ export const en = {
       subtitle: ['Perfect smile', 'Natural look', 'Luxury experience'],
       cta: 'Get a personal offer',
     },
+    smileDesign: {
+      titlePrefix: 'עצבו את החיוך שלכם',
+      titleHighlight: 'בהדמיה טכנולוגית',
+      titleSuffix: 'יחד עם הרופאים שלנו',
+      points: [
+        'בחרו את הגוון שאתם רוצים',
+        'את השקיפות שאתם רוצים',
+        'את הצורה שאתם רוצים',
+      ],
+      payoff: 'ותנו לנו לעשות את השאר',
+    },
+    dubaiValue: {
+      title: 'Why are our deals so worthwhile?',
+      cards: {
+        noTax: 'No taxes in Dubai',
+        noVat: 'No VAT in Dubai',
+        vacation: 'A vacation on top of your treatment',
+      },
+    },
     features: {
       warranty: {
         title: 'Full warranty',

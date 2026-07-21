@@ -7,6 +7,8 @@ export const LOGO_SRC = '/photo/dubadentlogotrans.png'
 
 export const HERO_BG_SRC = '/photo/dubai_background.png'
 
+export const TEETH_COLOR_SRC = '/photo/teeth_color.jpeg'
+
 const rawBeforeAfter = [
   'before after 1.jpeg',
   'before after 2.jpeg',

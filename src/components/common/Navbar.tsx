@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 
 import { cn } from '@/lib/utils'
 import { LOGO_SRC } from '@/common/constants/media'
-import { LanguageSwitcher } from '@/components/common/LanguageSwitcher'
 import { GoldCta } from '@/components/common/GoldCta'
 
 export function Navbar() {
@@ -39,7 +38,6 @@ export function Navbar() {
         </a>
 
         <div className="flex items-center gap-2">
-          <LanguageSwitcher />
           <GoldCta label={t('nav.cta')} size="default" className="hidden sm:inline-flex" />
         </div>
       </div>

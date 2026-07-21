@@ -52,7 +52,6 @@ export function Testimonials() {
                 <p className="text-lg leading-relaxed font-medium text-balance">
                   “{item.quote}”
                 </p>
-                <span className="text-muted-foreground text-sm">— {item.name}</span>
               </div>
             </div>
           )

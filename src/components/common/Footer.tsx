@@ -21,7 +21,7 @@ export function Footer() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {info.map(({ Icon, label, value }) => (
             <div key={label} className="flex items-center gap-3">
-              <span className="ring-gold text-gold flex size-11 shrink-0 items-center justify-center rounded-full">
+              <span className="ring-gold text-gold-solid flex size-11 shrink-0 items-center justify-center rounded-full">
                 <Icon className="size-5" />
               </span>
               <div>

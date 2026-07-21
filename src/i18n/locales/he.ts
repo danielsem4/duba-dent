@@ -11,7 +11,6 @@ export const he = {
       titleSuffix: 'ברמה הגבוהה בעולם',
       subtitle: ['חיוך מושלם', 'מראה טבעי', 'חוויה יוקרתית'],
       cta: 'לקבלת הצעה אישית',
-      scroll: 'גללו לגלריה',
     },
     features: {
       warranty: {

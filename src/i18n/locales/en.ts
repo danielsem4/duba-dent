@@ -11,7 +11,6 @@ export const en = {
       titleSuffix: 'veneers',
       subtitle: ['Perfect smile', 'Natural look', 'Luxury experience'],
       cta: 'Get a personal offer',
-      scroll: 'Scroll to gallery',
     },
     features: {
       warranty: {

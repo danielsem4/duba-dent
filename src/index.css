@@ -115,6 +115,11 @@
     color: transparent;
   }
 
+  /* solid gold for icons — text-gold is transparent for gradient text-clip */
+  .text-gold-solid {
+    color: var(--gold);
+  }
+
   /* gold gradient surface (buttons / borders) */
   .bg-gold {
     background: linear-gradient(180deg, #f7e6a6 0%, var(--gold) 45%, var(--gold-2) 100%);

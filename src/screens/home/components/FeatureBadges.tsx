@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next'
-import { BedDouble, Gem, ShieldCheck, UserCheck } from 'lucide-react'
+import { Bed, Gem, ShieldCheck, User } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 const FEATURES: { key: string; Icon: LucideIcon }[] = [
   { key: 'warranty', Icon: ShieldCheck },
   { key: 'materials', Icon: Gem },
-  { key: 'package', Icon: BedDouble },
-  { key: 'guidance', Icon: UserCheck },
+  { key: 'package', Icon: Bed },
+  { key: 'guidance', Icon: User },
 ]
 
 export function FeatureBadges() {
@@ -20,7 +20,7 @@ export function FeatureBadges() {
             key={key}
             className="card-luxury flex flex-col items-center gap-3 rounded-2xl p-4 text-center sm:p-5"
           >
-            <span className="ring-gold text-gold flex size-12 items-center justify-center rounded-full">
+            <span className="ring-gold text-gold-solid flex size-12 items-center justify-center rounded-full">
               <Icon className="size-6" />
             </span>
             <div>

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { ChevronDown, Dot } from 'lucide-react'
+import { Dot } from 'lucide-react'
 
 import { LOGO_SRC } from '@/common/constants/media'
 import { GoldCta } from '@/components/common/GoldCta'
@@ -45,14 +45,6 @@ export function Hero() {
 
         <GoldCta label={t('hero.cta')} className="mt-2" />
       </div>
-
-      <a
-        href="#gallery"
-        className="text-muted-foreground hover:text-foreground absolute bottom-8 z-10 flex flex-col items-center gap-1 text-xs transition"
-      >
-        {t('hero.scroll')}
-        <ChevronDown className="size-4 animate-bounce" />
-      </a>
     </section>
   )
 }

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { Quote } from 'lucide-react'
 
 import { TESTIMONIAL_VIDEOS } from '@/common/constants/media'
 import { SectionHeading } from '@/components/common/SectionHeading'
@@ -47,6 +48,7 @@ export function Testimonials() {
               </button>
               <div className="flex flex-1 flex-col items-center gap-3 p-6 text-center">
                 <StarRating />
+                <Quote className="text-gold-solid size-5 opacity-70" />
                 <p className="text-lg leading-relaxed font-medium text-balance">
                   “{item.quote}”
                 </p>

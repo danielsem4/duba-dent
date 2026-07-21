@@ -1,14 +1,10 @@
 import { useTranslation } from 'react-i18next'
-import { MousePointerClick } from 'lucide-react'
 
 import { GALLERY } from '@/common/constants/media'
 import { SectionHeading } from '@/components/common/SectionHeading'
-import { PlayButton } from '@/components/common/PlayButton'
-import { useVideoLightbox } from '@/store/useVideoLightbox'
 
 export function BeforeAfter() {
   const { t } = useTranslation()
-  const openVideo = useVideoLightbox((s) => s.open)
 
   return (
     <section id="gallery" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-16 sm:py-24">
@@ -16,10 +12,8 @@ export function BeforeAfter() {
 
       <div className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3">
         {GALLERY.map((item, i) => (
-          <button
+          <div
             key={item.image}
-            type="button"
-            onClick={() => item.video && openVideo(item.video)}
             className="group card-luxury relative aspect-[9/16] overflow-hidden rounded-2xl"
           >
             <img
@@ -35,18 +29,9 @@ export function BeforeAfter() {
             <span className="bg-primary/80 absolute bottom-3 left-3 rounded-full px-3 py-1 text-xs font-medium text-white backdrop-blur">
               {t('gallery.after')}
             </span>
-            {/* play overlay */}
-            <span className="absolute inset-0 flex items-center justify-center bg-black/10 opacity-90 transition group-hover:bg-black/25">
-              <PlayButton />
-            </span>
-          </button>
+          </div>
         ))}
       </div>
-
-      <p className="text-muted-foreground mt-8 flex items-center justify-center gap-2 text-sm">
-        <MousePointerClick className="size-4" />
-        {t('gallery.watch')}
-      </p>
     </section>
   )
 }

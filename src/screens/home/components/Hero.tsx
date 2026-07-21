@@ -1,9 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { Dot } from 'lucide-react'
 
-import { LOGO_SRC } from '@/common/constants/media'
+import { HERO_BG_SRC, LOGO_SRC } from '@/common/constants/media'
 import { GoldCta } from '@/components/common/GoldCta'
-import { DubaiSkyline } from '@/screens/home/components/DubaiSkyline'
 
 export function Hero() {
   const { t } = useTranslation()
@@ -14,8 +13,15 @@ export function Hero() {
       id="top"
       className="grain relative flex min-h-svh flex-col items-center justify-center overflow-hidden px-4 pt-24 pb-24 text-center sm:pb-32"
     >
-      {/* skyline behind content */}
-      <DubaiSkyline className="pointer-events-none absolute inset-x-0 bottom-0 h-[38%] w-full opacity-90" />
+      {/* full-bleed Dubai photo behind content */}
+      <img
+        src={HERO_BG_SRC}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-0 h-full w-full object-cover object-center"
+      />
+      {/* darken slightly for text contrast + fade into page below */}
+      <div className="pointer-events-none absolute inset-0 bg-background/25" />
       <div className="from-background pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t to-transparent" />
 
       <div className="animate-in fade-in slide-in-from-bottom-4 relative z-10 flex flex-col items-center gap-6 duration-1000">

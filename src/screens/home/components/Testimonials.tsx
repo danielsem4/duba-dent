@@ -24,11 +24,11 @@ export function Testimonials() {
         subtitle={t('testimonials.subtitle')}
       />
 
-      <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
-        {items.map((item, i) => {
-          const video = TESTIMONIAL_VIDEOS[i % TESTIMONIAL_VIDEOS.length]
+      <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 sm:gap-6">
+        {TESTIMONIAL_VIDEOS.map((video, i) => {
+          const item = items[i % items.length]
           return (
-            <div key={item.name} className="card-luxury flex flex-col overflow-hidden rounded-2xl">
+            <div key={video} className="card-luxury flex w-72 shrink-0 snap-start flex-col overflow-hidden rounded-2xl sm:w-80">
               <button
                 type="button"
                 onClick={() => video && openVideo(video)}

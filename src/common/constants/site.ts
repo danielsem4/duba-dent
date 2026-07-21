@@ -5,8 +5,8 @@
 export const SITE = {
   name: 'DubaDent',
   // international format, digits only — used to build the wa.me deep link
-  whatsappNumber: '972509109002',
-  phoneDisplay: '+972 50-910-9002',
+  whatsappNumber: '972525770052',
+  phoneDisplay: '+972 52-577-0052',
   location: 'Dubai, UAE',
 } as const
 

@@ -16,8 +16,8 @@ export function Home() {
       <Hero />
       <FeatureBadges />
       <BeforeAfter />
-      <CtaBanner />
       <Testimonials />
+      <CtaBanner />
     </>
   )
 }

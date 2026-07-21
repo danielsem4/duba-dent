@@ -5,6 +5,8 @@
 
 export const LOGO_SRC = '/photo/dubadentlogotrans.png'
 
+export const HERO_BG_SRC = '/photo/dubai_background.png'
+
 const rawBeforeAfter = [
   'before after 1.jpeg',
   'before after 2.jpeg',
@@ -24,6 +26,11 @@ const rawVideos = [
   'WhatsApp Video 2026-07-21 at 12.32.06.mp4',
   'WhatsApp Video 2026-07-21 at 12.32.09.mp4',
   'WhatsApp Video 2026-07-21 at 12.32.11.mp4',
+  'WhatsApp Video 2026-07-21 at 12.32.13 (1).mp4',
+  'WhatsApp Video 2026-07-21 at 12.32.13.mp4',
+  'WhatsApp Video 2026-07-21 at 12.32.14.mp4',
+  'WhatsApp Video 2026-07-21 at 12.32.15.mp4',
+  'WhatsApp Video 2026-07-21 at 12.32.19.mp4',
 ]
 
 export const BEFORE_AFTER_IMAGES = rawBeforeAfter.map(
@@ -36,15 +43,10 @@ export const VIDEOS = rawVideos.map(
 
 export interface GalleryItem {
   image: string
-  /** optional video shown in the lightbox when the card is played */
-  video?: string
 }
 
-/** Before/after cards, each paired with a testimonial-style clip. */
-export const GALLERY: GalleryItem[] = BEFORE_AFTER_IMAGES.map((image, i) => ({
-  image,
-  video: VIDEOS[i % VIDEOS.length],
-}))
+/** Before/after cards — images only, no video playback. */
+export const GALLERY: GalleryItem[] = BEFORE_AFTER_IMAGES.map((image) => ({ image }))
 
-/** Video testimonials (the last few clips, distinct from the gallery ones). */
-export const TESTIMONIAL_VIDEOS = [VIDEOS[6], VIDEOS[7], VIDEOS[8]]
+/** Video testimonials carousel — every clip. */
+export const TESTIMONIAL_VIDEOS = VIDEOS
